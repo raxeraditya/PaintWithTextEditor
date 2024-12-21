@@ -1,6 +1,6 @@
-import React from 'react';
-import { Save, Copy, Trash } from 'lucide-react';
-import { ToolButton } from './ToolButton';
+import React from "react";
+import { Save, Copy, Trash } from "lucide-react";
+import { ToolButton } from "./ToolButton";
 
 interface TextToolbarProps {
   fontSize: number;
@@ -19,10 +19,10 @@ export function TextToolbar({
   onFontFamilyChange,
   onSave,
   onCopy,
-  onClear
+  onClear,
 }: TextToolbarProps) {
   return (
-    <div className="flex gap-4 w-full justify-between bg-gray-100 dark:bg-gray-800 p-4 rounded transition-colors duration-300">
+    <div className="flex-col sm:flex-row items-center sm:flex flex gap-4 w-full justify-between bg-gray-100 dark:bg-gray-800 p-4 rounded transition-colors duration-300">
       <div className="flex gap-4">
         <select
           value={fontFamily}
@@ -42,8 +42,10 @@ export function TextToolbar({
             text-gray-900 dark:text-gray-100 transition-colors duration-300
             hover:scale-105 transition-transform"
         >
-          {[12, 14, 16, 18, 20, 24].map(size => (
-            <option key={size} value={size}>{size}px</option>
+          {[12, 14, 16, 18, 20, 24].map((size) => (
+            <option key={size} value={size}>
+              {size}px
+            </option>
           ))}
         </select>
       </div>

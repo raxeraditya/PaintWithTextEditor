@@ -1,6 +1,5 @@
-import React from 'react';
-import { TextToolbar } from './TextToolbar';
-import { useTextEditor } from '../hooks/useTextEditor';
+import { TextToolbar } from "./TextToolbar";
+import { useTextEditor } from "../hooks/useTextEditor";
 
 export function TextEditor() {
   const {
@@ -12,7 +11,7 @@ export function TextEditor() {
     handleFontFamilyChange,
     handleSave,
     handleCopy,
-    handleClear
+    handleClear,
   } = useTextEditor();
 
   return (
